@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset=utf-8 />
+    <title>nCovid-19</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js" integrity="sha512-YZ6b5bXRVwipfqul5krehD9qlbJzc6KOGXYsDjU9HHXW2gK57xmWl2gU6nAegiErAqFXhygKIsWPKbjLPXVb2g==" crossorigin=""></script>
+    
+    <!--Script to load ajax-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            function loadData() {
+                axios.get('https://api.rootnet.in/covid19-in/stats/latest')
+            .then(function (response) {
+              // handle success
+              var table = document.getElementById('table_for_show_data');
+              var deaths = 0;
+              var recoveries = 0;
+              var confirmed = 0;
+              var active = 0;
+              var rows = 
+                '<tr>'
+                + '<th>' + 'Location' + '</th>'
+                + '<th>' + 'Total Confirmed' + '</th>'
+                + '<th>' + 'No of Indian Residents' + '</th>'
+                + '<th>' + 'No of Foreign Residents' + '</th>'
+                + '<th>' + 'Total Recovered' + '</th>'
+                + '<th>' + 'Total Deceased' + '</th>'
+                + '</tr>';
+              var stats = response['data']['data']['regional'];
+                for (var i = 0 ; i < stats['length']; i++) {
+                    rows += '<tr>'
+                        + '<td>' + stats[i]['loc'] + '</td>'
+                        + '<td>' + stats[i]['totalConfirmed'] + '</td>'
+                        + '<td>' + stats[i]['confirmedCasesIndian'] + '</td>'
+                        + '<td>' + stats[i]['confirmedCasesForeign'] + '</td>'
+                        + '<td>' + stats[i]['discharged'] + '</td>'
+                        + '<td>' + stats[i]['deaths'] + '</td>'
+                        + '</tr>';
+                        deaths += stats[i]['deaths'];
+                        recoveries += stats[i]['discharged'];
+                        confirmed += stats[i]['totalConfirmed'];
+                }
+                active = confirmed - recoveries;
+                table.innerHTML = rows;
+                document.getElementById('deaths').innerHTML = deaths;
+                document.getElementById('recov').innerHTML = recoveries;
+                document.getElementById('conf').innerHTML = confirmed;
+                document.getElementById('active').innerHTML = active;
+            })
+            .catch(function (error) {
+              // handle error
+              console.log(error);
+            })
+            .then(function () {
+              // always executed
+            });
+            }
+        </script>
+    </head>
+    <body onload="loadData()">
+        <div>
+            <h2 class="text-danger text-center bg-dark">nCovid cases in INDIA</h2>
+        </div>
+        <br/>
+        <div class="container">
+        <table class="table table-striped table-bordered table-hover" id="table_for_show_data">
+
+        </table>
+    </div>
+            <div class="row">
+              <div class="container col-xl-4 w3-dark">
+                    <div class=" row-md-2 bg-dark text-white">Total Deaths</div>
+                    <label id="deaths"></label>
+                    <div class="row-md-2 bg-dark text-white">Total Recoveries</div>
+                    <label id="recov"></label>
+                    <div class="row-md-2 bg-dark text-white">Total Confirmed Cases</div>
+                    <label id="conf"></label>
+                    <div class="row-md-2 bg-dark text-white">Total Active Cases</div>
+                    <label id="active"></label>
+                </div>
+              <div class="container col-xl-8 w3-dark" >
+                    <div id="map"></div>
+                </div>
+                
+            </div>
+    </body>
+</html>
