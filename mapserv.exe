@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd"
+ [
+ <!ELEMENT VendorSpecificCapabilities EMPTY>
+ ]>  <!-- end of DOCTYPE declaration -->
+
+<WMT_MS_Capabilities version="1.1.1">
+
+<!-- MapServer version 7.0.7 (MS4W 3.3.0) OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=SVGCAIRO SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=FASTCGI SUPPORTS=THREADS SUPPORTS=GEOS SUPPORTS=POINT_Z_M INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>AWiFS  Image</Title>
+  <Abstract>This is for scientific study</Abstract>
+  <KeywordList>
+      <Keyword>AWiFS</Keyword>
+      <Keyword> Remote Sensing</Keyword>
+      <Keyword> GIS</Keyword>
+      <Keyword> ISRO</Keyword>
+      <Keyword> IRS</Keyword>
+      <Keyword> Map Service</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>Director IIRS, director@iirs.gov.in</ContactPerson>
+      <ContactOrganization>Indian Institute of Remote Sensing (IIRS), ISRO Dehradun India</ContactOrganization>
+    </ContactPersonPrimary>
+    <ContactAddress>
+        <AddressType>Official</AddressType>
+        <Address>4-Kalidas Road Dehradun</Address>
+        <City>Dehradun</City>
+        <StateOrProvince>Uttrakhand</StateOrProvince>
+        <PostCode>248001</PostCode>
+        <Country>India</Country>
+    </ContactAddress>
+  </ContactInformation>
+  <AccessConstraints>As per data and web service policy given in- http://www.iirs.gov.in</AccessConstraints>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>application/x-pdf</Format>
+      <Format>image/svg+xml</Format>
+      <Format>image/tiff</Format>
+      <Format>application/vnd.google-earth.kml+xml</Format>
+      <Format>application/vnd.google-earth.kmz</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/html</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <Format>text/plain</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </DescribeLayer>
+    <GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetLegendGraphic>
+    <GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://192.168.43.166/cgi-bin/mapserv.exe?version=1.1.1&amp;map=C:/Users/win-10/Documents/ms4w/apps/	Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetStyles>
+  </Request>
+  <Exception>
+    <Format>application/vnd.ogc.se_xml</Format>
+    <Format>application/vnd.ogc.se_inimage</Format>
+    <Format>application/vnd.ogc.se_blank</Format>
+  </Exception>
+  <VendorSpecificCapabilities />
+  <UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0"/>
+  <Layer>
+    <Name>TEST</Name>
+    <Title>AWiFS  Image</Title>
+    <Abstract>This is for scientific study</Abstract>
+    <KeywordList>
+        <Keyword>AWiFS</Keyword>
+        <Keyword> Remote Sensing</Keyword>
+        <Keyword> GIS</Keyword>
+        <Keyword> ISRO</Keyword>
+        <Keyword> IRS</Keyword>
+        <Keyword> Map Service</Keyword>
+    </KeywordList>
+    <SRS>EPSG:4326</SRS>
+    <SRS>AUTO:42001</SRS>
+    <SRS>AUTO:42304</SRS>
+    <SRS>AUTO:42002</SRS>
+    <SRS>AUTO:42003</SRS>
+    <SRS>AUTO:42004</SRS>
+    <SRS>EPSG:4267</SRS>
+    <SRS>EPSG:4269</SRS>
+    <SRS>EPSG:26703</SRS>
+    <SRS>EPSG:26704</SRS>
+    <SRS>EPSG:26705</SRS>
+    <SRS>EPSG:26706</SRS>
+    <SRS>EPSG:26707</SRS>
+    <SRS>EPSG:26708</SRS>
+    <SRS>EPSG:26709</SRS>
+    <SRS>EPSG:26710</SRS>
+    <SRS>EPSG:26711</SRS>
+    <SRS>EPSG:26712</SRS>
+    <SRS>EPSG:26713</SRS>
+    <SRS>EPSG:26714</SRS>
+    <SRS>EPSG:26715</SRS>
+    <SRS>EPSG:26716</SRS>
+    <SRS>EPSG:26717</SRS>
+    <SRS>EPSG:26718</SRS>
+    <SRS>EPSG:26719</SRS>
+    <SRS>EPSG:26720</SRS>
+    <SRS>EPSG:26721</SRS>
+    <SRS>EPSG:26722</SRS>
+    <SRS>EPSG:26903</SRS>
+    <SRS>EPSG:26904</SRS>
+    <SRS>EPSG:26905</SRS>
+    <SRS>EPSG:26906</SRS>
+    <SRS>EPSG:26907</SRS>
+    <SRS>EPSG:26908</SRS>
+    <SRS>EPSG:26909</SRS>
+    <SRS>EPSG:26910</SRS>
+    <SRS>EPSG:26911</SRS>
+    <SRS>EPSG:26912</SRS>
+    <SRS>EPSG:26913</SRS>
+    <SRS>EPSG:26914</SRS>
+    <SRS>EPSG:26915</SRS>
+    <SRS>EPSG:26916</SRS>
+    <SRS>EPSG:26917</SRS>
+    <SRS>EPSG:26918</SRS>
+    <SRS>EPSG:26919</SRS>
+    <SRS>EPSG:26920</SRS>
+    <SRS>EPSG:26921</SRS>
+    <SRS>EPSG:26922</SRS>
+    <SRS>EPSG:26923</SRS>
+    <SRS>EPSG:26930</SRS>
+    <SRS>EPSG:26986</SRS>
+    <SRS>EPSG:26987</SRS>
+    <SRS>EPSG:27582</SRS>
+    <SRS>EPSG:27700</SRS>
+    <SRS>EPSG:32118</SRS>
+    <SRS>EPSG:32128</SRS>
+    <SRS>EPSG:32129</SRS>
+    <SRS>EPSG:32601</SRS>
+    <SRS>EPSG:32602</SRS>
+    <SRS>EPSG:32603</SRS>
+    <SRS>EPSG:32604</SRS>
+    <SRS>EPSG:32605</SRS>
+    <SRS>EPSG:32606</SRS>
+    <SRS>EPSG:32607</SRS>
+    <SRS>EPSG:32608</SRS>
+    <SRS>EPSG:32609</SRS>
+    <SRS>EPSG:32610</SRS>
+    <SRS>EPSG:32611</SRS>
+    <SRS>EPSG:32612</SRS>
+    <SRS>EPSG:32613</SRS>
+    <SRS>EPSG:32614</SRS>
+    <SRS>EPSG:32615</SRS>
+    <SRS>EPSG:32616</SRS>
+    <SRS>EPSG:32617</SRS>
+    <SRS>EPSG:32618</SRS>
+    <SRS>EPSG:32619</SRS>
+    <SRS>EPSG:32620</SRS>
+    <SRS>EPSG:32621</SRS>
+    <SRS>EPSG:32622</SRS>
+    <SRS>EPSG:32623</SRS>
+    <SRS>EPSG:32624</SRS>
+    <SRS>EPSG:32625</SRS>
+    <SRS>EPSG:32626</SRS>
+    <SRS>EPSG:32627</SRS>
+    <SRS>EPSG:32628</SRS>
+    <SRS>EPSG:32629</SRS>
+    <SRS>EPSG:32630</SRS>
+    <SRS>EPSG:32631</SRS>
+    <SRS>EPSG:32632</SRS>
+    <SRS>EPSG:32633</SRS>
+    <SRS>EPSG:32634</SRS>
+    <SRS>EPSG:32635</SRS>
+    <SRS>EPSG:32636</SRS>
+    <SRS>EPSG:32637</SRS>
+    <SRS>EPSG:32638</SRS>
+    <SRS>EPSG:32639</SRS>
+    <SRS>EPSG:32640</SRS>
+    <SRS>EPSG:32641</SRS>
+    <SRS>EPSG:32642</SRS>
+    <SRS>EPSG:32643</SRS>
+    <SRS>EPSG:32644</SRS>
+    <SRS>EPSG:32645</SRS>
+    <SRS>EPSG:32646</SRS>
+    <SRS>EPSG:32647</SRS>
+    <SRS>EPSG:32648</SRS>
+    <SRS>EPSG:32649</SRS>
+    <SRS>EPSG:32650</SRS>
+    <SRS>EPSG:32651</SRS>
+    <SRS>EPSG:32652</SRS>
+    <SRS>EPSG:32653</SRS>
+    <SRS>EPSG:32654</SRS>
+    <SRS>EPSG:32655</SRS>
+    <SRS>EPSG:32656</SRS>
+    <SRS>EPSG:32657</SRS>
+    <SRS>EPSG:32658</SRS>
+    <SRS>EPSG:32659</SRS>
+    <SRS>EPSG:32660</SRS>
+    <SRS>EPSG:32701</SRS>
+    <SRS>EPSG:32702</SRS>
+    <SRS>EPSG:32703</SRS>
+    <SRS>EPSG:32704</SRS>
+    <SRS>EPSG:32705</SRS>
+    <SRS>EPSG:32706</SRS>
+    <SRS>EPSG:32707</SRS>
+    <SRS>EPSG:32708</SRS>
+    <SRS>EPSG:32709</SRS>
+    <SRS>EPSG:32710</SRS>
+    <SRS>EPSG:32711</SRS>
+    <SRS>EPSG:32712</SRS>
+    <SRS>EPSG:32713</SRS>
+    <SRS>EPSG:32714</SRS>
+    <SRS>EPSG:32715</SRS>
+    <SRS>EPSG:32716</SRS>
+    <SRS>EPSG:32717</SRS>
+    <SRS>EPSG:32718</SRS>
+    <SRS>EPSG:32719</SRS>
+    <SRS>EPSG:32720</SRS>
+    <SRS>EPSG:32721</SRS>
+    <SRS>EPSG:32722</SRS>
+    <SRS>EPSG:32723</SRS>
+    <SRS>EPSG:32724</SRS>
+    <SRS>EPSG:32725</SRS>
+    <SRS>EPSG:32726</SRS>
+    <SRS>EPSG:32727</SRS>
+    <SRS>EPSG:32728</SRS>
+    <SRS>EPSG:32729</SRS>
+    <SRS>EPSG:32730</SRS>
+    <SRS>EPSG:32731</SRS>
+    <SRS>EPSG:32732</SRS>
+    <SRS>EPSG:32733</SRS>
+    <SRS>EPSG:32734</SRS>
+    <SRS>EPSG:32735</SRS>
+    <SRS>EPSG:32736</SRS>
+    <SRS>EPSG:32737</SRS>
+    <SRS>EPSG:32738</SRS>
+    <SRS>EPSG:32739</SRS>
+    <SRS>EPSG:32740</SRS>
+    <SRS>EPSG:32741</SRS>
+    <SRS>EPSG:32742</SRS>
+    <SRS>EPSG:32743</SRS>
+    <SRS>EPSG:32744</SRS>
+    <SRS>EPSG:32745</SRS>
+    <SRS>EPSG:32746</SRS>
+    <SRS>EPSG:32747</SRS>
+    <SRS>EPSG:32748</SRS>
+    <SRS>EPSG:32749</SRS>
+    <SRS>EPSG:32750</SRS>
+    <SRS>EPSG:32751</SRS>
+    <SRS>EPSG:32752</SRS>
+    <SRS>EPSG:32753</SRS>
+    <SRS>EPSG:32754</SRS>
+    <SRS>EPSG:32755</SRS>
+    <SRS>EPSG:32756</SRS>
+    <SRS>EPSG:32757</SRS>
+    <SRS>EPSG:32758</SRS>
+    <SRS>EPSG:32759</SRS>
+    <SRS>EPSG:32760</SRS>
+    <SRS>EPSG:41001</SRS>
+    <SRS>EPSG:41002</SRS>
+    <SRS>EPSG:42101</SRS>
+    <SRS>EPSG:42102</SRS>
+    <SRS>EPSG:42103</SRS>
+    <SRS>EPSG:42104</SRS>
+    <SRS>EPSG:42105</SRS>
+    <SRS>EPSG:42106</SRS>
+    <SRS>EPSG:42200</SRS>
+    <SRS>EPSG:42201</SRS>
+    <SRS>EPSG:42202</SRS>
+    <SRS>EPSG:42203</SRS>
+    <SRS>EPSG:42204</SRS>
+    <SRS>EPSG:42205</SRS>
+    <SRS>EPSG:42206</SRS>
+    <SRS>EPSG:42207</SRS>
+    <SRS>EPSG:42208</SRS>
+    <SRS>EPSG:100001</SRS>
+    <SRS>EPSG:42301</SRS>
+    <SRS>EPSG:42302</SRS>
+    <SRS>EPSG:42303</SRS>
+    <SRS>EPSG:42304</SRS>
+    <SRS>EPSG:42305</SRS>
+    <SRS>EPSG:42306</SRS>
+    <SRS>EPSG:42307</SRS>
+    <SRS>EPSG:42308</SRS>
+    <SRS>EPSG:42309</SRS>
+    <SRS>EPSG:42310</SRS>
+    <SRS>EPSG:3857</SRS>
+    <LatLonBoundingBox minx="3.20733e+006" miny="596513" maxx="3.32151e+006" maxy="693820" />
+    <BoundingBox SRS="EPSG:4326"
+                minx="3.20733e+006" miny="596513" maxx="3.32151e+006" maxy="693820" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '02 Jan 2008' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>02 Jan 2008</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>02 Jan 2008</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '14 Feb 2009' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>14 Feb 2009</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>14 Feb 2009</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '08 Feb 2010' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>08 Feb 2010</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>08 Feb 2010</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '09 Feb 2010' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>09 Feb 2010</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>09 Feb 2010</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9907" miny="28.9904" maxx="95.0096" maxy="30.0093" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9907" miny="28.9904" maxx="95.0096" maxy="30.0093" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '31 Oct 2012' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>31 Oct 2012</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>31 Oct 2012</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '04 Feb 2013' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>04 Feb 2013</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>04 Feb 2013</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '18 Dec 2013' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>18 Dec 2013</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>18 Dec 2013</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.9908" miny="28.9904" maxx="95.0096" maxy="30.0092" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '31 Oct 2014' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>31 Oct 2014</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>31 Oct 2014</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.991" miny="28.991" maxx="95.009" maxy="30.009" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.991" miny="28.991" maxx="95.009" maxy="30.009" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '18 Mar 2016' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>18 Mar 2016</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>18 Mar 2016</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.991" miny="28.991" maxx="95.009" maxy="30.009" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.991" miny="28.991" maxx="95.009" maxy="30.009" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '02 Apr 2016' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>02 Apr 2016</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>02 Apr 2016</Title>
+        <SRS>EPSG:4326</SRS>
+        <LatLonBoundingBox minx="93.991" miny="28.991" maxx="95.009" maxy="30.009" />
+        <BoundingBox SRS="EPSG:4326"
+                    minx="93.991" miny="28.991" maxx="95.009" maxy="30.009" />
+    </Layer>
+  </Layer>
+</Capability>
+</WMT_MS_Capabilities>

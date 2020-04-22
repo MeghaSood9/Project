@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<WMS_Capabilities version="1.3.0"  xmlns="http://www.opengis.net/wms"   xmlns:sld="http://www.opengis.net/sld"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xmlns:ms="http://mapserver.gis.umn.edu/mapserver"   xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd  http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd  http://mapserver.gis.umn.edu/mapserver http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;service=WMS&amp;version=1.3.0&amp;request=GetSchemaExtension">
+
+<!-- MapServer version 7.0.7 (MS4W 3.3.0) OUTPUT=PNG OUTPUT=JPEG OUTPUT=KML SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=CAIRO SUPPORTS=SVG_SYMBOLS SUPPORTS=SVGCAIRO SUPPORTS=ICONV SUPPORTS=FRIBIDI SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=SOS_SERVER SUPPORTS=FASTCGI SUPPORTS=THREADS SUPPORTS=GEOS SUPPORTS=POINT_Z_M INPUT=JPEG INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>WMS</Name>
+  <Title>AWiFS  Image</Title>
+  <Abstract>This is for scientific study</Abstract>
+  <KeywordList>
+      <Keyword>AWiFS</Keyword>
+      <Keyword> Remote Sensing</Keyword>
+      <Keyword> GIS</Keyword>
+      <Keyword> ISRO</Keyword>
+      <Keyword> IRS</Keyword>
+      <Keyword> Map Service</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>Director IIRS, director@iirs.gov.in</ContactPerson>
+      <ContactOrganization>Indian Institute of Remote Sensing (IIRS), ISRO Dehradun India</ContactOrganization>
+    </ContactPersonPrimary>
+    <ContactAddress>
+        <AddressType>Official</AddressType>
+        <Address>4-Kalidas Road Dehradun</Address>
+        <City>Dehradun</City>
+        <StateOrProvince>Uttrakhand</StateOrProvince>
+        <PostCode>248001</PostCode>
+        <Country>India</Country>
+    </ContactAddress>
+  </ContactInformation>
+  <AccessConstraints>As per data and web service policy given in- http://www.iirs.gov.in</AccessConstraints>
+  <MaxWidth>4096</MaxWidth>
+  <MaxHeight>4096</MaxHeight>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>application/x-pdf</Format>
+      <Format>image/svg+xml</Format>
+      <Format>image/tiff</Format>
+      <Format>application/vnd.google-earth.kml+xml</Format>
+      <Format>application/vnd.google-earth.kmz</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/html</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <Format>text/plain</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <sld:DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:DescribeLayer>
+    <sld:GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/png; mode=8bit</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:GetLegendGraphic>
+    <ms:GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://172.27.4.193/cgi-bin/mapserv.exe?map=C:/Users/win-10/Documents/ms4w/apps/Study_area/test.map&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </ms:GetStyles>
+  </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <sld:UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0" InlineFeature="0" RemoteWCS="0"/>
+  <Layer>
+    <Name>TEST</Name>
+    <Title>AWiFS  Image</Title>
+    <Abstract>This is for scientific study</Abstract>
+    <KeywordList>
+        <Keyword>AWiFS</Keyword>
+        <Keyword> Remote Sensing</Keyword>
+        <Keyword> GIS</Keyword>
+        <Keyword> ISRO</Keyword>
+        <Keyword> IRS</Keyword>
+        <Keyword> Map Service</Keyword>
+    </KeywordList>
+    <CRS>EPSG:4326</CRS>
+    <CRS>AUTO:42001</CRS>
+    <CRS>AUTO:42304</CRS>
+    <CRS>AUTO:42002</CRS>
+    <CRS>AUTO:42003</CRS>
+    <CRS>AUTO:42004</CRS>
+    <CRS>EPSG:4267</CRS>
+    <CRS>EPSG:4269</CRS>
+    <CRS>EPSG:26703</CRS>
+    <CRS>EPSG:26704</CRS>
+    <CRS>EPSG:26705</CRS>
+    <CRS>EPSG:26706</CRS>
+    <CRS>EPSG:26707</CRS>
+    <CRS>EPSG:26708</CRS>
+    <CRS>EPSG:26709</CRS>
+    <CRS>EPSG:26710</CRS>
+    <CRS>EPSG:26711</CRS>
+    <CRS>EPSG:26712</CRS>
+    <CRS>EPSG:26713</CRS>
+    <CRS>EPSG:26714</CRS>
+    <CRS>EPSG:26715</CRS>
+    <CRS>EPSG:26716</CRS>
+    <CRS>EPSG:26717</CRS>
+    <CRS>EPSG:26718</CRS>
+    <CRS>EPSG:26719</CRS>
+    <CRS>EPSG:26720</CRS>
+    <CRS>EPSG:26721</CRS>
+    <CRS>EPSG:26722</CRS>
+    <CRS>EPSG:26903</CRS>
+    <CRS>EPSG:26904</CRS>
+    <CRS>EPSG:26905</CRS>
+    <CRS>EPSG:26906</CRS>
+    <CRS>EPSG:26907</CRS>
+    <CRS>EPSG:26908</CRS>
+    <CRS>EPSG:26909</CRS>
+    <CRS>EPSG:26910</CRS>
+    <CRS>EPSG:26911</CRS>
+    <CRS>EPSG:26912</CRS>
+    <CRS>EPSG:26913</CRS>
+    <CRS>EPSG:26914</CRS>
+    <CRS>EPSG:26915</CRS>
+    <CRS>EPSG:26916</CRS>
+    <CRS>EPSG:26917</CRS>
+    <CRS>EPSG:26918</CRS>
+    <CRS>EPSG:26919</CRS>
+    <CRS>EPSG:26920</CRS>
+    <CRS>EPSG:26921</CRS>
+    <CRS>EPSG:26922</CRS>
+    <CRS>EPSG:26923</CRS>
+    <CRS>EPSG:26930</CRS>
+    <CRS>EPSG:26986</CRS>
+    <CRS>EPSG:26987</CRS>
+    <CRS>EPSG:27582</CRS>
+    <CRS>EPSG:27700</CRS>
+    <CRS>EPSG:32118</CRS>
+    <CRS>EPSG:32128</CRS>
+    <CRS>EPSG:32129</CRS>
+    <CRS>EPSG:32601</CRS>
+    <CRS>EPSG:32602</CRS>
+    <CRS>EPSG:32603</CRS>
+    <CRS>EPSG:32604</CRS>
+    <CRS>EPSG:32605</CRS>
+    <CRS>EPSG:32606</CRS>
+    <CRS>EPSG:32607</CRS>
+    <CRS>EPSG:32608</CRS>
+    <CRS>EPSG:32609</CRS>
+    <CRS>EPSG:32610</CRS>
+    <CRS>EPSG:32611</CRS>
+    <CRS>EPSG:32612</CRS>
+    <CRS>EPSG:32613</CRS>
+    <CRS>EPSG:32614</CRS>
+    <CRS>EPSG:32615</CRS>
+    <CRS>EPSG:32616</CRS>
+    <CRS>EPSG:32617</CRS>
+    <CRS>EPSG:32618</CRS>
+    <CRS>EPSG:32619</CRS>
+    <CRS>EPSG:32620</CRS>
+    <CRS>EPSG:32621</CRS>
+    <CRS>EPSG:32622</CRS>
+    <CRS>EPSG:32623</CRS>
+    <CRS>EPSG:32624</CRS>
+    <CRS>EPSG:32625</CRS>
+    <CRS>EPSG:32626</CRS>
+    <CRS>EPSG:32627</CRS>
+    <CRS>EPSG:32628</CRS>
+    <CRS>EPSG:32629</CRS>
+    <CRS>EPSG:32630</CRS>
+    <CRS>EPSG:32631</CRS>
+    <CRS>EPSG:32632</CRS>
+    <CRS>EPSG:32633</CRS>
+    <CRS>EPSG:32634</CRS>
+    <CRS>EPSG:32635</CRS>
+    <CRS>EPSG:32636</CRS>
+    <CRS>EPSG:32637</CRS>
+    <CRS>EPSG:32638</CRS>
+    <CRS>EPSG:32639</CRS>
+    <CRS>EPSG:32640</CRS>
+    <CRS>EPSG:32641</CRS>
+    <CRS>EPSG:32642</CRS>
+    <CRS>EPSG:32643</CRS>
+    <CRS>EPSG:32644</CRS>
+    <CRS>EPSG:32645</CRS>
+    <CRS>EPSG:32646</CRS>
+    <CRS>EPSG:32647</CRS>
+    <CRS>EPSG:32648</CRS>
+    <CRS>EPSG:32649</CRS>
+    <CRS>EPSG:32650</CRS>
+    <CRS>EPSG:32651</CRS>
+    <CRS>EPSG:32652</CRS>
+    <CRS>EPSG:32653</CRS>
+    <CRS>EPSG:32654</CRS>
+    <CRS>EPSG:32655</CRS>
+    <CRS>EPSG:32656</CRS>
+    <CRS>EPSG:32657</CRS>
+    <CRS>EPSG:32658</CRS>
+    <CRS>EPSG:32659</CRS>
+    <CRS>EPSG:32660</CRS>
+    <CRS>EPSG:32701</CRS>
+    <CRS>EPSG:32702</CRS>
+    <CRS>EPSG:32703</CRS>
+    <CRS>EPSG:32704</CRS>
+    <CRS>EPSG:32705</CRS>
+    <CRS>EPSG:32706</CRS>
+    <CRS>EPSG:32707</CRS>
+    <CRS>EPSG:32708</CRS>
+    <CRS>EPSG:32709</CRS>
+    <CRS>EPSG:32710</CRS>
+    <CRS>EPSG:32711</CRS>
+    <CRS>EPSG:32712</CRS>
+    <CRS>EPSG:32713</CRS>
+    <CRS>EPSG:32714</CRS>
+    <CRS>EPSG:32715</CRS>
+    <CRS>EPSG:32716</CRS>
+    <CRS>EPSG:32717</CRS>
+    <CRS>EPSG:32718</CRS>
+    <CRS>EPSG:32719</CRS>
+    <CRS>EPSG:32720</CRS>
+    <CRS>EPSG:32721</CRS>
+    <CRS>EPSG:32722</CRS>
+    <CRS>EPSG:32723</CRS>
+    <CRS>EPSG:32724</CRS>
+    <CRS>EPSG:32725</CRS>
+    <CRS>EPSG:32726</CRS>
+    <CRS>EPSG:32727</CRS>
+    <CRS>EPSG:32728</CRS>
+    <CRS>EPSG:32729</CRS>
+    <CRS>EPSG:32730</CRS>
+    <CRS>EPSG:32731</CRS>
+    <CRS>EPSG:32732</CRS>
+    <CRS>EPSG:32733</CRS>
+    <CRS>EPSG:32734</CRS>
+    <CRS>EPSG:32735</CRS>
+    <CRS>EPSG:32736</CRS>
+    <CRS>EPSG:32737</CRS>
+    <CRS>EPSG:32738</CRS>
+    <CRS>EPSG:32739</CRS>
+    <CRS>EPSG:32740</CRS>
+    <CRS>EPSG:32741</CRS>
+    <CRS>EPSG:32742</CRS>
+    <CRS>EPSG:32743</CRS>
+    <CRS>EPSG:32744</CRS>
+    <CRS>EPSG:32745</CRS>
+    <CRS>EPSG:32746</CRS>
+    <CRS>EPSG:32747</CRS>
+    <CRS>EPSG:32748</CRS>
+    <CRS>EPSG:32749</CRS>
+    <CRS>EPSG:32750</CRS>
+    <CRS>EPSG:32751</CRS>
+    <CRS>EPSG:32752</CRS>
+    <CRS>EPSG:32753</CRS>
+    <CRS>EPSG:32754</CRS>
+    <CRS>EPSG:32755</CRS>
+    <CRS>EPSG:32756</CRS>
+    <CRS>EPSG:32757</CRS>
+    <CRS>EPSG:32758</CRS>
+    <CRS>EPSG:32759</CRS>
+    <CRS>EPSG:32760</CRS>
+    <CRS>EPSG:41001</CRS>
+    <CRS>EPSG:41002</CRS>
+    <CRS>EPSG:42101</CRS>
+    <CRS>EPSG:42102</CRS>
+    <CRS>EPSG:42103</CRS>
+    <CRS>EPSG:42104</CRS>
+    <CRS>EPSG:42105</CRS>
+    <CRS>EPSG:42106</CRS>
+    <CRS>EPSG:42200</CRS>
+    <CRS>EPSG:42201</CRS>
+    <CRS>EPSG:42202</CRS>
+    <CRS>EPSG:42203</CRS>
+    <CRS>EPSG:42204</CRS>
+    <CRS>EPSG:42205</CRS>
+    <CRS>EPSG:42206</CRS>
+    <CRS>EPSG:42207</CRS>
+    <CRS>EPSG:42208</CRS>
+    <CRS>EPSG:100001</CRS>
+    <CRS>EPSG:42301</CRS>
+    <CRS>EPSG:42302</CRS>
+    <CRS>EPSG:42303</CRS>
+    <CRS>EPSG:42304</CRS>
+    <CRS>EPSG:42305</CRS>
+    <CRS>EPSG:42306</CRS>
+    <CRS>EPSG:42307</CRS>
+    <CRS>EPSG:42308</CRS>
+    <CRS>EPSG:42309</CRS>
+    <CRS>EPSG:42310</CRS>
+    <CRS>EPSG:3857</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>3.20733e+006</westBoundLongitude>
+        <eastBoundLongitude>3.32151e+006</eastBoundLongitude>
+        <southBoundLatitude>596513</southBoundLatitude>
+        <northBoundLatitude>693820</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="EPSG:4326"
+                minx="596513" miny="3.20733e+006" maxx="693820" maxy="3.32151e+006" />
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '02 Jan 2008' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>02 Jan 2008</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>02 Jan 2008</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9908</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9908" maxx="30.0092" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '14 Feb 2009' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>14 Feb 2009</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>14 Feb 2009</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9908</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9908" maxx="30.0092" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '08 Feb 2010' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>08 Feb 2010</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>08 Feb 2010</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9908</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9908" maxx="30.0092" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '09 Feb 2010' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>09 Feb 2010</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>09 Feb 2010</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9907</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0093</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9907" maxx="30.0093" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '31 Oct 2012' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>31 Oct 2012</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>31 Oct 2012</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9908</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9908" maxx="30.0092" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '04 Feb 2013' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>04 Feb 2013</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>04 Feb 2013</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9908</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9908" maxx="30.0092" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '18 Dec 2013' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>18 Dec 2013</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>18 Dec 2013</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.9908</westBoundLongitude>
+            <eastBoundLongitude>95.0096</eastBoundLongitude>
+            <southBoundLatitude>28.9904</southBoundLatitude>
+            <northBoundLatitude>30.0092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.9904" miny="93.9908" maxx="30.0092" maxy="95.0096" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '31 Oct 2014' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>31 Oct 2014</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>31 Oct 2014</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.991</westBoundLongitude>
+            <eastBoundLongitude>95.009</eastBoundLongitude>
+            <southBoundLatitude>28.991</southBoundLatitude>
+            <northBoundLatitude>30.009</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.991" miny="93.991" maxx="30.009" maxy="95.009" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '18 Mar 2016' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>18 Mar 2016</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>18 Mar 2016</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.991</westBoundLongitude>
+            <eastBoundLongitude>95.009</eastBoundLongitude>
+            <southBoundLatitude>28.991</southBoundLatitude>
+            <northBoundLatitude>30.009</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.991" miny="93.991" maxx="30.009" maxy="95.009" />
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+<!-- WARNING: The layer name '02 Apr 2016' might contain spaces or invalid characters or may start with a number. This could lead to potential problems. -->
+        <Name>02 Apr 2016</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>02 Apr 2016</Title>
+        <CRS>EPSG:4326</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>93.991</westBoundLongitude>
+            <eastBoundLongitude>95.009</eastBoundLongitude>
+            <southBoundLatitude>28.991</southBoundLatitude>
+            <northBoundLatitude>30.009</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326"
+                    minx="28.991" miny="93.991" maxx="30.009" maxy="95.009" />
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>
